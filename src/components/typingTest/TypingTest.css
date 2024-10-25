@@ -1,0 +1,89 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+}
+
+/* .type-box */
+.type-box {
+    display: block;
+    max-width: 1000px;
+    height: 120px;
+    overflow: hidden;
+    margin-top: 100px;
+    position: relative;
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+        top: 200px;
+        width: 60%;
+    }
+    user-select: none;
+}
+
+.input-field {
+    z-index: -999;
+    position: absolute;
+    opacity: 0;
+    height: 80vh;
+}
+
+/* .type-box .text */
+span.word {
+    font-size: 28px;
+    padding: 0 0px;
+    margin: 5px 2px 5px;
+    border-radius: 2px;
+    line-height: 1.4;
+    flex-wrap: wrap;
+}
+
+span.char {
+    text-align: center;
+    color: #9a9a9a;
+    margin: 5px 1px 5px;
+    border-radius: 2px;
+}
+
+span.active {
+    border-bottom: 3px solid #3295db;
+    border-radius: 0;
+    color: #3295db;
+    animation: cursorBlink 2s 1s infinite;
+}
+
+@keyframes cursorBlink {
+    0% {
+        border-color: #3295db;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: #3295db;
+    }
+}
+span.correct {
+    color: rgba(255, 255, 255, 0.852);
+}
+
+span.wrong {
+    color: rgb(252, 59, 59);
+}
+
+span.space {
+    padding: 0 3px;
+}
+
+/* Stats */
+.result {
+    color: #BB86FC;
+    margin-top: 50px;
+}
+
+.btn {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
